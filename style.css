@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-size: 18px;
+    color: hsl(215, 51%, 70%);
+    font-family: 'Outfit';
+    font-weight: 300;
+}
+body {
+    background-color:  hsl(217, 54%, 11%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 720px;
+    max-width: 1440px;
+    
+}
+
+.preview_card {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 300px;
+    width: 100%;
+    padding: 20px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 15px;
+    box-shadow: 0px 20px 20px 10px  hsl(214, 67%, 5%);
+}
+
+.preview_card img {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.hover_effect img:hover,
+.hover_effect img:active {
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.hover_effect:hover, 
+.hover_effect:active {
+    background-image: url(./images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsla(178, 100%, 50%, 0.473);
+    border-radius: 10px;
+    opacity: 1;
+    z-index: 1;
+    cursor: pointer;
+    
+}
+
+.h4 {
+    font-size: 22px;
+    font-family: 'Outfit', serif;
+    font-weight: 600;
+}
+.preview_card a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
+.preview_card a:hover,
+.preview_card a:active {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.contant {
+    margin-bottom: 5px;
+}
+
+.price_time {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.price_time img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.price {
+    color: hsl(178, 100%, 50%);
+    font-family: 'Outfit', serif;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 2px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.line {
+    opacity: .2;
+}
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.creator img {
+    width: 35px;
+    height: 35px;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50px;
+}
+.creator span {
+    color: hsl(0, 0%, 100%);
+}
+
+@media (max-width:480px) {
+    .container {
+        height: 100%;
+
+    }
+    .preview_card {
+        margin-top: 30px;
+    }
+}
